@@ -1,0 +1,184 @@
+/* General Reset */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+h1, h2, h3, h4, h5, h6 {
+   line-height: 1;
+}
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+/* End General Reset */
+
+/* General Settings */
+
+:root {
+   /* Primary Colors */
+   --primary: hsl(185, 75%, 39%);
+   --secondary: hsl(229, 23%, 23%);
+   --tertiary: hsl(227, 10%, 46%);
+
+   /* Neutral Colors */
+   --neutral-1: hsl(0, 0%, 59%);
+   --neutral-2: hsl(0, 0%, 100%);
+
+   /* Fonts Family */
+   --ff-body: 'Kumbh Sans';
+
+   /* Fonts Weight */
+   --fw-regular: 400;
+   --fw-bold: 700;
+
+   /* Font Size */
+   --fs-body: 1rem;
+}
+
+/* End General Settings */
+
+/* General Styling */
+
+body {
+  background: var(--primary);
+  font-family: var(--ff-body);
+  font-weight: var(--fw-regular);
+  color: var(--secondary);
+  font-size: var(--fs-body);
+
+  /* For This Project Only */
+  display: grid;
+  place-items: center;
+}
+
+/* End General Styling */
+
+/* Section Style */
+
+.profile-card {
+  background: var(--neutral-2);
+  text-align: center;
+  border: none;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin: 1rem;
+  box-shadow: 0px 5px 50px 30px hsla(229, 23%, 23%,0.15);
+}
+
+.pattern {
+  min-height: 10rem;
+}
+
+.profile-avatar {
+  margin: auto;
+  margin-top: -4rem;
+  width: 120px;
+  border: 6px solid var(--neutral-2);
+  border-radius: 50%;
+
+  position: sticky;
+}
+
+.profile-content {
+  --gap: 0.25rem;
+  --padding: 2rem;
+
+  margin-top: 1.25rem;
+  display: grid;
+  gap: var(--gap);
+}
+
+.profile-data {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.profile-name {
+  font-size: 1.25rem;
+}
+
+.age, .location, .profile-stats p:last-of-type {
+  color: var(--neutral-1);
+}
+
+.age {
+  font-size: 1.25rem;
+}
+
+.line {
+  margin-top: 1.5rem;
+  padding: var(--padding);
+
+  border-top: 2px solid hsla(229, 23%, 23%,0.1);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.profile-stats p:first-of-type {
+  font-size: 1.25rem;
+  font-weight: var(--fw-bold);
+}
+
+.profile-stats p:last-of-type {
+  font-size: 0.70rem;
+  letter-spacing: 2px;
+}
+
+/* End Section Style */
+
+/* Attribution Style */
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
